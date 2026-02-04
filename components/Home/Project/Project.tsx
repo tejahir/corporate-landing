@@ -1,4 +1,8 @@
+"use client";
 import React from 'react'
+import Tilt from "react-parallax-tilt"
+import Image from 'next/image';
+
 
 const PROJECT_IMAGES =[
     "/images/p1.jpg",
@@ -21,6 +25,21 @@ const Project = () => {
             Transforming ideas into <br /> 
             digital realit
         </h1>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-20 w-[80%] mx-auto gap-6'>
+            {PROJECT_IMAGES.map((src, idx)=>{
+                return <div key={idx}>
+                    <Tilt>
+                        <img 
+                        src={src} 
+                        alt="project" 
+                        width={350}
+                        height={450}
+                        className='rounded-md'
+                        />
+                    </Tilt>
+                </div>;
+            })}
+        </div>
     </div>
   )
 }
