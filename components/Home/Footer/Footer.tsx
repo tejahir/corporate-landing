@@ -1,5 +1,6 @@
 import Logo from '@/components/Helper/Logo'
 import React from 'react'
+import { BiCalendar } from 'react-icons/bi'
 import { FaFacebookF, FaInstagram, FaPaperPlane, FaPhone, FaYoutube } from 'react-icons/fa'
 import { IoMailOpen } from 'react-icons/io5'
 import { MdKeyboardArrowRight, MdKeyboardDoubleArrowRight } from 'react-icons/md'
@@ -80,7 +81,28 @@ const Footer = () => {
                 </div>
             </div>
             {/*  */}
-            
+            <div className='mx-auto'>
+                <h1 className='text-lg font-bold text-white'>Newsletter</h1>
+                <div className='mt-8'>
+                    <p className='font-medium text-sm text-white'>
+                        It is a log established fact that a reader will be disturacted
+                    </p>
+                    <div className='mt-5 flex items-center space-x-4'>
+                        <img src="/images/f.jpg" alt="img" width={80} height={25} />
+                        <div className='flex-1'>
+                            <div className='flex items-center'>
+                                <BiCalendar className='text-amber-300 w-6 h-6 mr-2'/>
+                                <p className=' text-white text-sm font-semibold'>5 February,2026</p>
+                            </div>
+                            <p className='mt-2 text-white font-bold'>The standaed chunk of lorem ipsum</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {/*  */}
+        <div className='border-t-2 w-[80%] mx-auto border-gray-700 mt-8'>
+            <p className='mt-8 text-gray-300'>© 2026,Corporate Landing . All Rights Reserved.</p>
         </div>
     </div>
   )
